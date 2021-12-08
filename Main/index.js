@@ -5,27 +5,27 @@ const inquirer = require("inquirer")
 const questions = [
   {
     type: "input",
-    name: "",
+    name: "name",
     message: "What is the team manager's name?"
   },
   {
     type: "input",
-    name: "",
+    name: "id",
     message: "What is the team manager's id?"
   },
   {
     type: "input",
-    name: "",
+    name: "email",
     message: "What is the team manager's email?"
   },
   {
     type: "input",
-    name: "",
+    name: "officeNumber",
     message: "What is the team manager's office number?"
   },
   {
     type: "list",
-    name: "",
+    name: "type",
     message: "Which type of team member would you like to add?",
     choices: ["Engineer", "Intern", "I don't want to add any more team members"]
   },
@@ -46,7 +46,7 @@ const questions = [
   },
   {
     type: "input",
-    name: "",
+    name: "github",
     message: "What is your engineer's GitHub username?"
   },
   {
