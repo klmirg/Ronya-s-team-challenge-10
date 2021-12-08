@@ -6,11 +6,19 @@
 class Intern extends Employee {
   // create a constructor
   // create all of the functions for that class
-  constructor() {
+  constructor(name, id, email, school) {
 
-    super();
+    super(name, id, email);
 
     this.school = school;
+  }
+
+  getRole() {
+    return "Intern";
+  }
+
+  getSchool() {
+    return this.school;
   }
 }
 
