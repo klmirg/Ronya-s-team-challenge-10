@@ -2,6 +2,8 @@ const fs = require("fs")
 const path = require("path")
 const inquirer = require("inquirer")
 const Manager = require("./lib/Manager")
+const Engineer = require("./lib/Engineer")
+const Intern = require("./lib/Intern")
 
 const teamMembers = [];
 const OUTPUT_DIR = path.resolve(__dirname, "output")
@@ -84,7 +86,12 @@ mainMenu()
     name: "github",
     message: "What is your engineer's GitHub username?"
   },
-    ])
+    ]).then(answers =>{
+      const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.github)
+    teamMembers.push(engineer)
+    console.log(teamMembers)
+    mainMenu()
+    })
   }
 
   function addIntern(){
@@ -109,7 +116,12 @@ mainMenu()
     name: "school",
     message: "What is your intern's school?"
   },
-  ])
+  ]).then(answers =>{
+    const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.school)
+  teamMembers.push(intern)
+  console.log(teamMembers)
+  mainMenu()
+  })
 }
 
 function buildTeam(){

@@ -6,6 +6,7 @@
 const generateTeam = team => {
 
 function teamManager() {
+  
 
 }
 
@@ -14,11 +15,9 @@ function teamEngineer() {
 }
 
 function teamIntern() {
-  
-}
-
-
-
-
 
 }
+
+}
+
+// module.exports = 

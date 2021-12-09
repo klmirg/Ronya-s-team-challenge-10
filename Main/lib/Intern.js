@@ -5,8 +5,7 @@
 const Employee = require('./Employee')
 
 class Intern extends Employee {
-  // create a constructor
-  // create all of the functions for that class
+  // This creates a constructor with the parameters of 'name', 'id', 'email', and 'school'.
   constructor(name, id, email, school) {
 
     super(name, id, email);
@@ -23,9 +22,5 @@ class Intern extends Employee {
   }
 }
 
-
-// After that you can create an intern in the Intern.test.js 
-// file and then test each of the functions and values to make sure 
-// they are what you expect
 
 module.exports = Intern;

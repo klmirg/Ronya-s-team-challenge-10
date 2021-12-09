@@ -19,15 +19,3 @@ test("Can set name via getName()", ()=>{
 
 
 
-
-
-
-// refer to google looking up "jest"
-
-// expect(employee.id).toBe('id')
-// expect(employee.email).toBe('email')
-
-// employee.getRole();
-// employee.getInventory();
-
-

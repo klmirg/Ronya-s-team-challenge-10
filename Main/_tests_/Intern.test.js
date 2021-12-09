@@ -1,9 +1,12 @@
 const Intern = require ('../lib/Intern.js');
 
 test('creates a new intern object', () => {
-  const intern = new Intern('Steve');
+  const intern = new Intern('Steve', '6345', 'steve@gmail.com', 'Harvard');
 
-  expect(intern.school).toBe('');
+  expect(intern.name).toBe('Steve');
+  expect(intern.id).toBe('6345');
+  expect(intern.email).toBe('steve@gmail.com');
+  expect(intern.school).toBe('Harvard');
 
   intern.getSchool();
   intern.getRole();  /* Overridden to return 'Intern' */
