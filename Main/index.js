@@ -40,7 +40,7 @@ mainMenu()
 }
 
   // handle creating a new instance of manager with all the responses
-  // what team memeber would you like to add next?
+  // what team member would you like to add next?
 
   function mainMenu(){
     inquirer.prompt([
