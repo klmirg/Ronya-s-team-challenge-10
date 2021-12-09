@@ -1,11 +1,11 @@
 const Manager = require ('../lib/Manager.js');
 
 test('creates a new manager object', () => {
-  const manager = new Manager('');
+  const manager = new Manager('Dave');
 
   expect(manager.officeNumber).toBe('officeNumber');
 
-  
+
 });
 
 

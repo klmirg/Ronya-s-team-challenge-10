@@ -1,7 +1,8 @@
 const Engineer = require ('../lib/Engineer.js');
 
+
 test('creates a new engineer object', () => {
-  const engineer = new Engineer('');
+  const engineer = new Engineer('Gene');
 
   expect(engineer.github).toBe('github');
 
