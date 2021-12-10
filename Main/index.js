@@ -36,7 +36,7 @@ function addManager(){
 ]).then(answers =>{
   const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber)
 teamMembers.push(manager)
-console.log(teamMembers)
+// console.log(teamMembers)
 mainMenu()
 })
 }
@@ -58,6 +58,7 @@ mainMenu()
       } else if (userChoice.memberChoice === "Intern") {
         addIntern();
       } else {
+        console.log(teamMembers)
         buildTeam();
       }
     })
@@ -89,7 +90,7 @@ mainMenu()
     ]).then(answers =>{
       const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.github)
     teamMembers.push(engineer)
-    console.log(teamMembers)
+    // console.log(teamMembers)
     mainMenu()
     })
   }
@@ -119,7 +120,7 @@ mainMenu()
   ]).then(answers =>{
     const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.school)
   teamMembers.push(intern)
-  console.log(teamMembers)
+  // console.log(teamMembers)
   mainMenu()
   })
 }
