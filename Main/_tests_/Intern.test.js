@@ -8,6 +8,6 @@ test('creates a new intern object', () => {
   expect(intern.email).toBe('steve@gmail.com');
   expect(intern.school).toBe('Harvard');
 
-  intern.getSchool();
-  intern.getRole();  /* Overridden to return 'Intern' */
+  expect(intern.getSchool()).toBe('Harvard');
+  expect(intern.getRole()).toBe('Intern');  
 });

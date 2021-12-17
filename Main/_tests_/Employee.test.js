@@ -37,6 +37,6 @@ test("Can set email via getEmail()", ()=> {
   const role = "Employee";
   const id = 6345;
   const email = "klmirg6@gmail.com";
-  const employee = new Employee(name, id, role, email);
+  const employee = new Employee(name, id, email);
   expect(employee.getEmail()).toBe(email)
 })

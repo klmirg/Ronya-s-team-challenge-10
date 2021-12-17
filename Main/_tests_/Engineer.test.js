@@ -1,6 +1,5 @@
 const Engineer = require ('../lib/Engineer.js');
 
-
 test('creates a new engineer object', () => {
   const engineer = new Engineer('Gene', '45', 'klmirg6@gmail.com', 'klmirg');
 
@@ -10,5 +9,6 @@ test('creates a new engineer object', () => {
   expect(engineer.github).toBe('klmirg');
 
   expect(engineer.getGithub()).toBe('klmirg');
-  expect(engineer.getRole()).toBe('Engineer'); /* Overridden to return 'Engineer' */
+  expect(engineer.getRole()).toBe('Engineer'); 
 });
+

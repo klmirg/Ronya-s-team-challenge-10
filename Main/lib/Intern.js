@@ -4,9 +4,8 @@ const Employee = require('./Employee')
 class Intern extends Employee {
   // This creates a constructor with the parameters of 'name', 'id', 'email', and 'school'.
   constructor(name, id, email, school) {
-
+    
     super(name, id, email);
-
     this.school = school;
   }
 

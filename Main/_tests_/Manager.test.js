@@ -9,5 +9,4 @@ test('creates a new manager object', () => {
   expect(manager.officeNumber).toBe('227');
 
   expect(manager.getRole()).toBe('Manager');
-
 });
