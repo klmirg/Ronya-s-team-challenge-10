@@ -1,16 +1,18 @@
+// These are all the files we need to access for this page.
 const fs = require("fs")
 const path = require("path")
 const inquirer = require("inquirer")
 const Manager = require("./lib/Manager")
 const Engineer = require("./lib/Engineer")
 const Intern = require("./lib/Intern")
-
+// The empty teamMembers array we use to push all our teamMembers to.
 const teamMembers = [];
 const OUTPUT_DIR = path.resolve(__dirname, "output")
 const outputPath = path.join(OUTPUT_DIR, "team.html")
 
 const render = require("./src/template.js")
 
+// This is the function that creates the manager.
 function addManager(){
   inquirer.prompt([
   {
@@ -36,14 +38,12 @@ function addManager(){
 ]).then(answers =>{
   const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber)
 teamMembers.push(manager)
-// console.log(teamMembers)
 mainMenu()
 })
 }
 
-  // handle creating a new instance of manager with all the responses
-  // what team member would you like to add next?
-
+// This is the function that asks the question of what type of employee you'd like to add. 
+// After each questionairre's, we go back to this function until you don't want to add anymore members.
   function mainMenu(){
     inquirer.prompt([
   {
@@ -64,7 +64,7 @@ mainMenu()
     })
 }
 
-
+// This is the function that creates the engineer based off of the answers the user gives.
   function addEngineer(){
     inquirer.prompt([
   {
@@ -90,11 +90,11 @@ mainMenu()
     ]).then(answers =>{
       const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.github)
     teamMembers.push(engineer)
-    // console.log(teamMembers)
     mainMenu()
     })
   }
-
+  
+  // This is the function that creates the Intern based off of the user's input.
   function addIntern(){
     inquirer.prompt([
   {
@@ -120,17 +120,18 @@ mainMenu()
   ]).then(answers =>{
     const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.school)
   teamMembers.push(intern)
-  // console.log(teamMembers)
   mainMenu()
   })
 }
 
+// This function builds the team and gets all the teamMembers that we pushed to our empty "teamMember" array.
+// And then this function checks for an existing "output" directory, and if there isn't one, to create one.
 function buildTeam(){
     if(!fs.existsSync(OUTPUT_DIR)){
       fs.mkdirSync(OUTPUT_DIR)
     }
     fs.writeFileSync(outputPath, render(teamMembers), "utf-8" )
-
 }
 
+// Calling the function "addManager".
 addManager()

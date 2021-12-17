@@ -1,11 +1,6 @@
-// name     getName()
-// id      getId()
-// email     getEmail()
-// getRole()  returns 'Employee'
-
+// This creates a class of Employee.
 class Employee {
-  // create a constructor
-  // create all of the functions for that class
+  // This is the constructor with the properties and methods for the Employee object.
   constructor(name, id, email) {
 
     this.name = name;
@@ -29,8 +24,5 @@ class Employee {
     return this.email;
   }
 }
-
-
-
 
 module.exports = Employee;

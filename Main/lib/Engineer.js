@@ -1,13 +1,8 @@
-// In addition to Employee's properties and methods, Engineer also has...
-// github    github username
-// getGithub()
-// getRole() // Overridden to return 'Engineer'
+// This makes it so you can access the "Employee" class with it's methods and properties.
 const Employee = require('./Employee')
-
-
+// This creates a class of Engineer and extends the methods and properties from the "Employee".
 class Engineer extends Employee {
-  // create a constructor
-  // create all of the functions for that class
+  // This creates a constructor with the parameters of 'name', 'id', 'email', and 'github'.
   constructor(name, id, email, github) {
 
     super(name, id, email);
@@ -23,8 +18,6 @@ class Engineer extends Employee {
     return this.github;
   }
 }
-
-
 
 
 module.exports = Engineer;

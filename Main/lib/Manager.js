@@ -1,11 +1,8 @@
-// In addition to the employee's properties and methods, Manager will also have...
-// officeNumber
-// getRole()    Overridden to return 'Manager'
+// This makes it so you can access the "Employee" class with it's methods and properties.
 const Employee = require("./Employee")
-
+// This creates a class of Manager and extends the methods and properties from the "Employee".
 class Manager extends Employee {
-  // create a constructor
-  // create all of the functions for that class
+  // This creates a constructor with the parameters of 'name', 'id', 'email', and 'officeNumber'.
   constructor(name, id, email, officeNumber) {
     super(name, id, email);
     this.officeNumber = officeNumber;
@@ -20,7 +17,5 @@ class Manager extends Employee {
   }
 
 }
-
-
 
 module.exports = Manager;

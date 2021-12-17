@@ -1,14 +1,7 @@
-
-
-// in here build bootstrap cards **template literals hint hint
-// create a function for each individual employee 
-// use the methods "getName()" etc to show the specific employees name etc
-// then youre going to want to filter *.filter()* over your employees utilizing the getRole()
-// map over the specific employee and send them to their respective functions
-
+// This function generates the Team and makes cards for each individual team member.
 const generateTeam = team => {
-// console.log("passing teamMembers to generateTeam", team)
 
+// This function creates the Manager card
 const teamManager = (Manager) => {
     
   return `
@@ -24,9 +17,8 @@ const teamManager = (Manager) => {
       </div>
     </div>
   `
-
 }
-
+// This function creates the Engineer cards.
 const teamEngineer = (Engineer) => {
 
   return `
@@ -44,6 +36,7 @@ const teamEngineer = (Engineer) => {
   `
 }
 
+// This function creates the Intern cards.
 const teamIntern = (Intern) => {
   return `
   <div class="card col" style="width: 18rem;">
@@ -60,6 +53,7 @@ const teamIntern = (Intern) => {
   `
 }
 
+// This is the empty array that each member of the team gets pushed to to create the html.
   const html = [];
 
   html.push(team
@@ -72,18 +66,17 @@ const teamIntern = (Intern) => {
     .map(engineer => teamEngineer(engineer))
     .join("")
     );
-    
+
   html.push(team
     .filter(employee => employee.getRole() === "Intern")
     .map(intern => teamIntern(intern))
     .join("")
     );
 
-    
-
   return html.join("")
 }
 
+// This exports the main outline of the html to create the html.
 module.exports = team => { 
   return `
   
