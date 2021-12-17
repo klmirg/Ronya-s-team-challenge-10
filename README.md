@@ -31,6 +31,7 @@ Generates a team and creates a webpage with each team member and all of their in
 
 It is open to the public, so feel free to use it if you'd like.
 Here is a tutorial video on how to use it:
+https://watch.screencastify.com/v/IXSTGxXNLia64DdrHstq
 
  ## Languages
  * JavaScript
